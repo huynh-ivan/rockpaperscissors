@@ -12,14 +12,11 @@ const scissors = "scissors";
 //console.log(typeof(scissors));
 
 
-//need to find out how to make this function select automatically
-//Possibly use math.random and math.floor somehow?
-//math.random can return a random numeric value, and if I assign that number value to a var, that could mimic random selection
-function randomInt(max) {
+function randomInt(max) { // this function returns a random int from 0 to 2
     return Math.floor(Math.random() * max);
 }
 
-function getComputerChoice() {
+function getComputerChoice() { // Create a function that will automatically return "rock". "paper", or "scissors" based on the output of randomInt
     let computerChoice = randomInt(3);
     if (computerChoice === 0) {
         return rock;
@@ -30,18 +27,15 @@ function getComputerChoice() {
     else {
         return scissors;
     }
-    console.log(computerChoice)
-
 }
 
-// console.log(getComputerChoice())
+console.log(getComputerChoice())
 
-// randomInt()
-// console.log(randomInt(3))
-
-//Create a function that will automatically return "rock". "paper", or "scissors"
-//this function is actually more suited for user input by using the prompt. method
-/* function getUserChoice = prompt.("Rock, paper or scissors?", input) {
+function getUserChoice(input) { //this function prompts a user to input rock, paper or scissors and ensures that input is both valid and matches the global wariables
+    
+    let userChoice = input.toLowerCase;
+    
+    
     if (input.toLowerCase() === rock) {
         //console.log(input);
         //console.log(typeof(input)); // if this is the output, the program stopped executing here
@@ -58,16 +52,17 @@ function getComputerChoice() {
         return scissors;
     }
     else {
-        console.log("buuubuuu")
+        console.log("buuubuuu");
+        alert("This is a buuubuuu");
+
     }
-    //console.log(input);
-    console.log(input.toLowerCase());
 }
-// After writing out the function, you need to call it in order for it to actually initialize and execute
-getComputerChoice("Ivan wWJFSD aDSFSDre you doing?!")
-//console.log(getComputerChoice('heyooooooo'))
 
 
+console.log(getUserChoice("scis")); // After writing out the function, you need to call it in order for it to actually initialize and execute
+
+
+//prompt("Rock, paper, scissors?");
 
 //RPS is a game played in rounds
 //A player wins when they win a majority of rounds (2/3)
@@ -93,4 +88,3 @@ getComputerChoice("Ivan wWJFSD aDSFSDre you doing?!")
 //and input 2 = scissor input 1 would lose and input 2 would win
 //and input 2 = paper  (i.e. itself), this would result in a tie between input 1 and input 2
 //and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
-*/
