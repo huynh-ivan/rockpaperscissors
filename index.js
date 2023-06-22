@@ -35,7 +35,8 @@ function getComputerChoice(input) {
     console.log(input.toLowerCase());
 }
 
-console.log(getComputerChoice('Scissors'))
+getComputerChoice("scissors")
+//console.log(getComputerChoice('heyooooooo'))
 
 
 
