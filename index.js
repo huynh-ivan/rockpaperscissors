@@ -19,11 +19,29 @@ function randomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+function getComputerChoice() {
+    let computerChoice = randomInt(3);
+    if (computerChoice === 0) {
+        return rock;
+    }
+    else if (computerChoice === 1) {
+        return paper;
+    }
+    else {
+        return scissors;
+    }
+    console.log(computerChoice)
+
+}
+
+// console.log(getComputerChoice())
+
 // randomInt()
 // console.log(randomInt(3))
 
 //Create a function that will automatically return "rock". "paper", or "scissors"
-function getComputerChoice(input) {
+//this function is actually more suited for user input by using the prompt. method
+/* function getUserChoice = prompt.("Rock, paper or scissors?", input) {
     if (input.toLowerCase() === rock) {
         //console.log(input);
         //console.log(typeof(input)); // if this is the output, the program stopped executing here
@@ -75,3 +93,4 @@ getComputerChoice("Ivan wWJFSD aDSFSDre you doing?!")
 //and input 2 = scissor input 1 would lose and input 2 would win
 //and input 2 = paper  (i.e. itself), this would result in a tie between input 1 and input 2
 //and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
+*/
