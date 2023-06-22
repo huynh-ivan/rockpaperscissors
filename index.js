@@ -34,8 +34,8 @@ function getComputerChoice(input) {
     //console.log(input);
     console.log(input.toLowerCase());
 }
-
-getComputerChoice("scissors")
+// After writing out the function, you need to call it in order for it to actually initialize and execute
+getComputerChoice("Ivan wWJFSD aDSFSDre you doing?!")
 //console.log(getComputerChoice('heyooooooo'))
 
 
