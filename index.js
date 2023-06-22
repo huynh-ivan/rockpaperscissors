@@ -2,7 +2,42 @@
 
 //This is some pseudocode 
 
-//Create a variable that the computer can use to return a value of "rock", "paper", or "scissors"
+
+// Declare global variables
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors"; 
+
+//console.log(scissors);
+//console.log(typeof(scissors));
+
+//Create a function that will return "rock". "paper", or "scissors"
+function getComputerChoice(input) {
+    if (input.toLowerCase() === rock) {
+        //console.log(input);
+        //console.log(typeof(input)); // if this is the output, the program stopped executing here
+        return rock;
+    }
+    else if (input.toLowerCase() === paper) {
+        //console.log(input);
+        //console.log(typeof(input)); // if this is the output, the program stopped executing here
+        return paper; 
+    }
+    else if (input.toLowerCase() === scissors) {
+        //console.log(input);
+        //console.log(typeof(input)); // if this is the output, the program stopped executing here
+        return scissors;
+    }
+    else {
+        console.log("buuubuuu")
+    }
+    //console.log(input);
+    console.log(input.toLowerCase());
+}
+
+console.log(getComputerChoice('Scissors'))
+
+
 
 //RPS is a game played in rounds
 //A player wins when they win a majority of rounds (2/3)
