@@ -11,7 +11,18 @@ const scissors = "scissors";
 //console.log(scissors);
 //console.log(typeof(scissors));
 
-//Create a function that will return "rock". "paper", or "scissors"
+
+//need to find out how to make this function select automatically
+//Possibly use math.random and math.floor somehow?
+//math.random can return a random numeric value, and if I assign that number value to a var, that could mimic random selection
+function randomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+// randomInt()
+// console.log(randomInt(3))
+
+//Create a function that will automatically return "rock". "paper", or "scissors"
 function getComputerChoice(input) {
     if (input.toLowerCase() === rock) {
         //console.log(input);
