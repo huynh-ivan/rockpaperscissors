@@ -61,6 +61,15 @@ function getUserChoice(input) { //this function prompts a user to input rock, pa
 console.log(getUserChoice("scis")); // After writing out the function, you need to call it in order for it to actually initialize and execute
 
 
+const playerSelection =  getUserChoice();
+const computerSelection = getComputerChoice();
+
+function playRound (playerSelection, computerSelection) {
+
+}
+
+console.log(playRound(playerSelection,computerSelection))
+
 //prompt("Rock, paper, scissors?");
 
 //RPS is a game played in rounds
