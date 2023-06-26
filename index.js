@@ -62,46 +62,34 @@ console.log(getComputerChoice())
 console.log(getUserChoice("scis")); // After writing out the function, you need to call it in order for it to actually initialize and execute
 */ 
 
-let playerSelection = prompt("Rock, Paper, or scissors?", "input").toLowerCase();
-//console.log(playerSelection)
-
+//Prompt the user to input a value and lowercase the return value
+let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
+console.log(playerSelection)
+console.log(typeof(playerSelection))
+console.log(typeof(rock))
 let computerSelection = getComputerChoice();
-console.log(computerSelection[0].toUpperCase());
+//console.log(computerSelection[0].toUpperCase());
 
 
 function playRound(playerSelection, computerSelection) {
-    return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats paper"
+//Invoke getComputerChoice in this function
+    //Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
+    
+    return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
         : (playerSelection === rock && computerSelection === rock) ? "It's a draw!"
-        : (playerSelection === rock && computerSelection === paper) ? "You lose"
-    //let computerSelection = getComputerChoice();
-
-        // if (playerSelection === rock && computerSelection 
+        : (playerSelection === rock && computerSelection === paper) ? "You lose! Paper beats rock."
+        : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock!"
+        : (playerSelection === paper && computerSelection === paper) ? "It's a draw!"
+        : (playerSelection === paper && computerSelection === scissors) ? "You lose! Scissors beats paper."
+        : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beats paper!"
+        : (playerSelection === scissors && computerSelection === scissors) ? "It's a draw"
+        : (playerSelection === scissors && computerSelection === rock) ? "You lose! Rock beats scissors."
+        //: (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
+        : "";
+}
         
-        //Prompt the user to input a value
-        //Lower case the value
-        //Invoke getComputerChoice in this function
-        //Create a series of of if/else statements using the `and` operator
-        //These statements should return a message containing the normalized user input and the computer's input
-}
- 
     
-    
-    
-
-    
-
-
 console.log(playRound());
-
-const playerSelection =  getUserChoice();
-const computerSelection = getComputerChoice();
-
-function playRound (playerSelection, computerSelection) {
-
-}
-
-console.log(playRound(playerSelection,computerSelection))
-
 //prompt("Rock, paper, scissors?");
 
 //RPS is a game played in rounds
