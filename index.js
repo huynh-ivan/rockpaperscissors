@@ -66,6 +66,13 @@ const playerSelection = "";
 const computerSelection = "" ;
 
 function playRound (playerSelection, computerSelection) {
+    
+    //set up the variable within this function
+
+    let playerSelection = prompt("Rock, Paper, or scissors?", "Input Choice");
+    let computerSelection = getComputerChoice();
+
+
     //Prompt the user to input a value
     //Lower case the value
     //Invoke getComputerChoice in this function
