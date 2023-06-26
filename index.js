@@ -93,6 +93,15 @@ function playRound(playerSelection, computerSelection) {
 
 console.log(playRound());
 
+const playerSelection =  getUserChoice();
+const computerSelection = getComputerChoice();
+
+function playRound (playerSelection, computerSelection) {
+
+}
+
+console.log(playRound(playerSelection,computerSelection))
+
 //prompt("Rock, paper, scissors?");
 
 //RPS is a game played in rounds
