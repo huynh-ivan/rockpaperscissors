@@ -68,23 +68,28 @@ let playerSelection = prompt("Rock, Paper, or scissors?", "input").toLowerCase()
 let computerSelection = getComputerChoice();
 console.log(computerSelection[0].toUpperCase());
 
- function playRound (playerSelection, computerSelection) {
-    
-    if (playerSelection === rock && computerSelection === paper) {
-        console.log("You Lose! Rock loses to paper.") 
-    }
-    
 
+function playRound(playerSelection, computerSelection) {
+    return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats paper"
+        : (playerSelection === rock && computerSelection === rock) ? "It's a draw!"
+        : (playerSelection === rock && computerSelection === paper) ? "You lose"
     //let computerSelection = getComputerChoice();
 
-    // if (playerSelection === rock && computerSelection 
-    
-    //Prompt the user to input a value
-    //Lower case the value
-    //Invoke getComputerChoice in this function
-    //Create a series of of if/else statements using the `and` operator
-    //These statements should return a message containing the normalized user input and the computer's input
+        // if (playerSelection === rock && computerSelection 
+        
+        //Prompt the user to input a value
+        //Lower case the value
+        //Invoke getComputerChoice in this function
+        //Create a series of of if/else statements using the `and` operator
+        //These statements should return a message containing the normalized user input and the computer's input
 }
+ 
+    
+    
+    
+
+    
+
 
 console.log(playRound());
 
