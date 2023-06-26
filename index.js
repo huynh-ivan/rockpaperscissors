@@ -65,6 +65,14 @@ console.log(getUserChoice("scis")); // After writing out the function, you need 
 const playerSelection = "";
 const computerSelection = "" ;
 
+function playRound (playerSelection, computerSelection) {
+    //Prompt the user to input a value
+    //Lower case the value
+    //Invoke getComputerChoice in this function
+    //Create a series of of if/else statements using the `and` operator
+    //These statements should return a message containing the normalized user input and the computer's input
+}
+
 //prompt("Rock, paper, scissors?");
 
 //RPS is a game played in rounds
