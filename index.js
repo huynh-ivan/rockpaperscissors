@@ -31,7 +31,8 @@ function getComputerChoice() { // Create a function that will automatically retu
 
 console.log(getComputerChoice())
 
-function getUserChoice(input) { //this function prompts a user to input rock, paper or scissors and ensures that input is both valid and matches the global wariables
+//On Review, the getUserChoice function actually isn't necessary because an actual round of the game would prompt the user for input. We'd still need to normalize the responses to return the correct variable though.
+/* function getUserChoice(input) { //this function prompts a user to input rock, paper or scissors and ensures that input is both valid and matches the global wariables. 
     
     let userChoice = input.toLowerCase;
     
@@ -59,6 +60,7 @@ function getUserChoice(input) { //this function prompts a user to input rock, pa
 }
 
 console.log(getUserChoice("scis")); // After writing out the function, you need to call it in order for it to actually initialize and execute
+*/ 
 
 const playerSelection = "";
 const computerSelection = "" ;
