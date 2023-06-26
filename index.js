@@ -62,23 +62,26 @@ console.log(getComputerChoice())
 console.log(getUserChoice("scis")); // After writing out the function, you need to call it in order for it to actually initialize and execute
 */ 
 
-const playerSelection = "";
+const playerSelection = prompt("Rock, Paper, or scissors?", "input").toLowerCase();
 const computerSelection = "" ;
 
-function playRound (playerSelection, computerSelection) {
+function playRound (playerSelection) {
     
     //set up the variable within this function
 
-    let playerSelection = prompt("Rock, Paper, or scissors?", "Input Choice");
-    let computerSelection = getComputerChoice();
 
+    //let computerSelection = getComputerChoice();
 
+    // if (playerSelection === rock && computerSelection 
+    
     //Prompt the user to input a value
     //Lower case the value
     //Invoke getComputerChoice in this function
     //Create a series of of if/else statements using the `and` operator
     //These statements should return a message containing the normalized user input and the computer's input
 }
+
+console.log(playRound());
 
 //prompt("Rock, paper, scissors?");
 
