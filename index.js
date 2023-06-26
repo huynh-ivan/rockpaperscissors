@@ -62,13 +62,18 @@ console.log(getComputerChoice())
 console.log(getUserChoice("scis")); // After writing out the function, you need to call it in order for it to actually initialize and execute
 */ 
 
-const playerSelection = prompt("Rock, Paper, or scissors?", "input").toLowerCase();
-const computerSelection = "" ;
+let playerSelection = prompt("Rock, Paper, or scissors?", "input").toLowerCase();
+//console.log(playerSelection)
 
-function playRound (playerSelection) {
+let computerSelection = getComputerChoice();
+console.log(computerSelection[0].toUpperCase());
+
+ function playRound (playerSelection, computerSelection) {
     
-    //set up the variable within this function
-
+    if (playerSelection === rock && computerSelection === paper) {
+        console.log("You Lose! Rock loses to paper.") 
+    }
+    
 
     //let computerSelection = getComputerChoice();
 
