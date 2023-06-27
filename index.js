@@ -84,7 +84,7 @@ function playRound(playerSelection, computerSelection) {
         : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beats paper!"
         : (playerSelection === scissors && computerSelection === scissors) ? "It's a draw"
         : (playerSelection === scissors && computerSelection === rock) ? "You lose! Rock beats scissors."
-        //: (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
+        : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
         : "";
 }
         
