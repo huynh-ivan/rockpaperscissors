@@ -29,7 +29,7 @@ function getComputerChoice() { // Create a function that will automatically retu
     }
 }
 
-console.log(getComputerChoice())
+// console.log(getComputerChoice())
 
 //On Review, the getUserChoice function actually isn't necessary because an actual round of the game would prompt the user for input. We'd still need to normalize the responses to return the correct variable though.
 /* function getUserChoice(input) { //this function prompts a user to input rock, paper or scissors and ensures that input is both valid and matches the global wariables. 
@@ -64,9 +64,9 @@ console.log(getUserChoice("scis")); // After writing out the function, you need 
 
 //Prompt the user to input a value and lowercase the return value
 let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
-console.log(playerSelection)
-console.log(typeof(playerSelection))
-console.log(typeof(rock))
+// console.log(playerSelection)
+// console.log(typeof(playerSelection))
+// console.log(typeof(rock))
 let computerSelection = getComputerChoice();
 //console.log(computerSelection[0].toUpperCase());
 
@@ -88,8 +88,9 @@ function playRound(playerSelection, computerSelection) {
         : "";
 }
         
-    
-console.log(playRound());
+console.log(playerSelection);
+console.log(computerSelection);    
+console.log(playRound(playerSelection, computerSelection));
 //prompt("Rock, paper, scissors?");
 
 //RPS is a game played in rounds
