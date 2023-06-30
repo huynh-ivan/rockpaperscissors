@@ -93,6 +93,10 @@ console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
 
 function game() {
+    let playerScore = 0;
+    let computerScore = 0; 
+
+    for (playerScore = 0, computerScore = 0; playerScore >= 3 || computerScore >= 3;   )
     //the loop condition feels like it'd be an "or" situation (i.e either player's score reaches 3); this may need to be a block statement because there are two conditions
     //we can set the default vlaue of playerScore and computerScore to be 0; this is the initialization
     //For every point allocated to a player, we need to increase their score by 1
