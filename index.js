@@ -92,8 +92,19 @@ console.log(playerSelection);
 console.log(computerSelection);    
 console.log(playRound(playerSelection, computerSelection));
 
-
-
+function game() {
+    //the loop condition feels like it'd be an "or" situation (i.e either player's score reaches 3); this may need to be a block statement because there are two conditions
+    //we can set the default vlaue of playerScore and computerScore to be 0; this is the initialization
+    //For every point allocated to a player, we need to increase their score by 1
+    //the loop should terminate when one player's score equals 3
+    //we'll need an if/else statement to return who the winner is to the console
+    
+    //Play till the first player reaches a score of 3 (which is theoretically more than 5 rounds)
+    //If the return includes "win", increment the user's score by 1
+    //If the return includes "lose", increment the computer score by 1
+    //If the return includes "draw", increment each player's score by 0
+    
+}
 
 
 
@@ -102,9 +113,7 @@ console.log(playRound(playerSelection, computerSelection));
 //RPS is a game played in rounds
 //A player wins when they win a majority of rounds (2/3)
 //A round is won based of comparing the input of player 1 versus player 2
-//During a game, after each round, we need to track whetheer player 1 won or player 2 won 
-//For every point allocated to a player, we need to increase their score by 1
-//The winner of the game is the first user to win 2 rounds
+
 
 //If input 1 = rock
 //and input 2 = scissors, input 1 would win and input 2 would lose
