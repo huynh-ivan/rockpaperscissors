@@ -92,11 +92,35 @@ console.log(playerSelection);
 console.log(computerSelection);    
 console.log(playRound(playerSelection, computerSelection));
 
-function game() {
-    let playerScore = 0;
-    let computerScore = 0; 
+let playerScore = 0;
+let computerScore = 0;
 
-    for (playerScore = 0, computerScore = 0; playerScore >= 3 || computerScore >= 3;   )
+// Helper Functions
+function 
+
+
+//Game function
+
+function game() {
+
+    
+
+
+
+    /* let winRound = playRound(playerSelection, computerSelection); 
+
+    //If the return includes "win", increment the user's score by 1
+    (winRound.includes("win")) ? playerScore++
+        //If the return includes "lose", increment the computer score by 1
+        : (winRound.includes("lose")) ? computerScore++
+        //If the return includes "draw", increment each player's score by 0
+        : (winRound.includes("draw")) ? playerScore += 0, computerScore += 0
+        : (winRound.includes("invalid")) ? alert("the input is invalid")
+        : 
+    */
+
+}
+    
     //the loop condition feels like it'd be an "or" situation (i.e either player's score reaches 3); this may need to be a block statement because there are two conditions
     //we can set the default vlaue of playerScore and computerScore to be 0; this is the initialization
     //For every point allocated to a player, we need to increase their score by 1
@@ -104,11 +128,8 @@ function game() {
     //we'll need an if/else statement to return who the winner is to the console
     
     //Play till the first player reaches a score of 3 (which is theoretically more than 5 rounds)
-    //If the return includes "win", increment the user's score by 1
-    //If the return includes "lose", increment the computer score by 1
-    //If the return includes "draw", increment each player's score by 0
     
-}
+
 
 
 
