@@ -94,14 +94,26 @@ console.log(playRound(playerSelection, computerSelection));
 
 let playerScore = 0;
 let computerScore = 0;
-
 // Helper Functions
-function 
+function scoreRound() { 
+    // Calls playRound() and store in the result variable
+    let result = playRound(playerSelection, computerSelection);
+    
+    // Determine if player or computer wins
+    // increment playerScore or computerScore by 1
+    
+    return (result.includes("win")) ? console.log(playerScore++)
+        : (result.includes("lose")) ? console.log(computerScore++)
+        : (result.includes("draw")) ? console.log((playerScore += 0, computerScore += 0))
+        : (result.includes("invalid")) ? "Invalid outcome" 
+        : "How'd you get here?";
+}
 
+console.log(scoreRound());
 
 //Game function
 
-function game() {
+//function game() {
 
     
 
@@ -119,7 +131,7 @@ function game() {
         : 
     */
 
-}
+
     
     //the loop condition feels like it'd be an "or" situation (i.e either player's score reaches 3); this may need to be a block statement because there are two conditions
     //we can set the default vlaue of playerScore and computerScore to be 0; this is the initialization
