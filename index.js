@@ -29,10 +29,72 @@ function getComputerChoice() { // Create a function that will automatically retu
     }
 }
 
+//Prompt the user to input a value and lowercase the return value
+let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
+
+let computerSelection = getComputerChoice();
+
+function playRound(playerSelection, computerSelection) {
+    // Invoke getComputerChoice in this function
+    // Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
+    return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
+        : (playerSelection === rock && computerSelection === paper) ? "You lose! Paper beats rock."
+        : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock!"
+        : (playerSelection === paper && computerSelection === scissors) ? "You lose! Scissors beats paper."
+        : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beats paper!"
+        : (playerSelection === scissors && computerSelection === rock) ? "You lose! Rock beats scissors."
+        : (playerSelection === computerSelection) ? "It's a draw!"
+        : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
+        : "";
+}
+        
+console.log(playerSelection);
+console.log(computerSelection);    
+console.log(playRound(playerSelection, computerSelection));
+
+let playerScore = 0;
+let computerScore = 0;
+
+// Helper Functions
+
+//Game function
+
+
+
+
+// Dead Code Below ---------------------------------------------------------
+
+//prompt("Rock, paper, scissors?");
+
+//RPS is a game played in rounds
+//A player wins when they win a majority of rounds (2/3)
+//A round is won based of comparing the input of player 1 versus player 2
+
+
+//If input 1 = rock
+//and input 2 = scissors, input 1 would win and input 2 would lose
+//and input 2 = paper, input 1 would lose and input 2 would win
+//and input 2 = rock (i.e. itself), this would result in a tie between input 1 and input 2
+//and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
+
+//If input 1 = scissor
+//and input 2 = paper input 1 would win and input 2 would lose
+//and input 2 = rock input 1 would lose and input 2 would win
+//and input 2 = scissor (i.e. itself), this would result in a tie between input 1 and input 2
+//and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
+
+//If input 1 = paper
+//and input 2 = rock input 1 would win and input 2 would lose
+//and input 2 = scissor input 1 would lose and input 2 would win
+//and input 2 = paper  (i.e. itself), this would result in a tie between input 1 and input 2
+//and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
+
+/* Dead Code
+
 // console.log(getComputerChoice())
 
 //On Review, the getUserChoice function actually isn't necessary because an actual round of the game would prompt the user for input. We'd still need to normalize the responses to return the correct variable though.
-/* function getUserChoice(input) { //this function prompts a user to input rock, paper or scissors and ensures that input is both valid and matches the global wariables. 
+function getUserChoice(input) { //this function prompts a user to input rock, paper or scissors and ensures that input is both valid and matches the global wariables. 
     
     let userChoice = input.toLowerCase;
     
@@ -60,46 +122,32 @@ function getComputerChoice() { // Create a function that will automatically retu
 }
 
 console.log(getUserChoice("scis")); // After writing out the function, you need to call it in order for it to actually initialize and execute
-*/ 
 
-//Prompt the user to input a value and lowercase the return value
-let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
-// console.log(playerSelection)
-// console.log(typeof(playerSelection))
-// console.log(typeof(rock))
-let computerSelection = getComputerChoice();
-//console.log(computerSelection[0].toUpperCase());
+    let winRound = playRound(playerSelection, computerSelection); 
+
+    //If the return includes "win", increment the user's score by 1
+    (winRound.includes("win")) ? playerScore++
+        //If the return includes "lose", increment the computer score by 1
+        : (winRound.includes("lose")) ? computerScore++
+        //If the return includes "draw", increment each player's score by 0
+        : (winRound.includes("draw")) ? playerScore += 0, computerScore += 0
+        : (winRound.includes("invalid")) ? alert("the input is invalid")
+        : 
 
 
-function playRound(playerSelection, computerSelection) {
-    // Invoke getComputerChoice in this function
-    // Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
-    return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
-        : (playerSelection === rock && computerSelection === paper) ? "You lose! Paper beats rock."
-        : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock!"
-        : (playerSelection === paper && computerSelection === scissors) ? "You lose! Scissors beats paper."
-        : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beats paper!"
-        : (playerSelection === scissors && computerSelection === rock) ? "You lose! Rock beats scissors."
-        : (playerSelection === computerSelection) ? "It's a draw!"
-        : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
-        : "";
-}
-        
-console.log(playerSelection);
-console.log(computerSelection);    
-console.log(playRound(playerSelection, computerSelection));
 
-let playerScore = 0;
-let computerScore = 0;
-//let increaseScore = ++playerScore;
-
-//console.log(increaseScore);
-
-// Helper Functions
-function scoreRound() { 
-    // Calls playRound() and store in the result variable
-    let result = playRound(playerSelection, computerSelection);
     
+    //the loop condition feels like it'd be an "or" situation (i.e either player's score reaches 3); this may need to be a block statement because there are two conditions
+    //we can set the default vlaue of playerScore and computerScore to be 0; this is the initialization
+    //For every point allocated to a player, we need to increase their score by 1
+    //the loop should terminate when one player's score equals 3
+    //we'll need an if/else statement to return who the winner is to the console
+    
+    //Play till the first player reaches a score of 3 (which is theoretically more than 5 rounds)
+
+/* function scoreRound() { 
+    // Calls playRound() and store in the result variable
+    let result = playRound(playerSelection, computerSelection) 
     // Determine if player or computer wins
     // increment playerScore or computerScore by 1
     
@@ -111,63 +159,6 @@ function scoreRound() {
 }
 
 console.log(scoreRound());
+*/
 
-
-//Game function
-
-//function game() {
-
-    
-
-
-
-    /* let winRound = playRound(playerSelection, computerSelection); 
-
-    //If the return includes "win", increment the user's score by 1
-    (winRound.includes("win")) ? playerScore++
-        //If the return includes "lose", increment the computer score by 1
-        : (winRound.includes("lose")) ? computerScore++
-        //If the return includes "draw", increment each player's score by 0
-        : (winRound.includes("draw")) ? playerScore += 0, computerScore += 0
-        : (winRound.includes("invalid")) ? alert("the input is invalid")
-        : 
-    */
-
-
-    
-    //the loop condition feels like it'd be an "or" situation (i.e either player's score reaches 3); this may need to be a block statement because there are two conditions
-    //we can set the default vlaue of playerScore and computerScore to be 0; this is the initialization
-    //For every point allocated to a player, we need to increase their score by 1
-    //the loop should terminate when one player's score equals 3
-    //we'll need an if/else statement to return who the winner is to the console
-    
-    //Play till the first player reaches a score of 3 (which is theoretically more than 5 rounds)
-    
-
-
-
-
-//prompt("Rock, paper, scissors?");
-
-//RPS is a game played in rounds
-//A player wins when they win a majority of rounds (2/3)
-//A round is won based of comparing the input of player 1 versus player 2
-
-
-//If input 1 = rock
-//and input 2 = scissors, input 1 would win and input 2 would lose
-//and input 2 = paper, input 1 would lose and input 2 would win
-//and input 2 = rock (i.e. itself), this would result in a tie between input 1 and input 2
-//and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
-
-//If input 1 = scissor
-//and input 2 = paper input 1 would win and input 2 would lose
-//and input 2 = rock input 1 would lose and input 2 would win
-//and input 2 = scissor (i.e. itself), this would result in a tie between input 1 and input 2
-//and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
-
-//If input 1 = paper
-//and input 2 = rock input 1 would win and input 2 would lose
-//and input 2 = scissor input 1 would lose and input 2 would win
-//and input 2 = paper  (i.e. itself), this would result in a tie between input 1 and input 2
-//and input 2 != rock, paper, or scissors, it is invalid and the round is re-done
+*./
