@@ -43,7 +43,7 @@ function playRound(playerSelection, computerSelection) {
         : (playerSelection === paper && computerSelection === scissors) ? "You lose! Scissors beats paper."
         : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beats paper!"
         : (playerSelection === scissors && computerSelection === rock) ? "You lose! Rock beats scissors."
-        : (playerSelection === computerSelection) ? "It's a draw!"
+        : (playerSelection === computerSelection) ? "It's a tie!"
         : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
         : "";
 }
@@ -57,7 +57,62 @@ let computerScore = 0;
 
 // Helper Functions
 
-//Game function
+//Function to convert "win"/"lose"/"draw" into numbers?
+
+// Function to play 1 round and keep the score
+
+function keepScore (win, lose, tie, invalid) {
+    let score = playRound(playerSelection, computerSelection)
+    if (score.includes("win")) {
+        win();
+    } 
+    else if (score.includes("lose")) {
+        lose();
+    }
+    else if (score.includes("tie")) {
+        tie()
+    }
+    else {
+        invalid();
+    }
+}
+
+function win {
+    return ++playerScore;
+}
+
+function lose {
+    return ++computerScore;
+}
+
+function tie {
+    return [(playerScore + 0), (computerScore+0)]
+}
+
+function invalid {
+    return "this is invalid"
+}
+
+// If the return contains "win", increase the player's score by 1
+// If the return contains "lose", increase the computer's score by 1
+// If the return contains "tie", 
+// If the return contains "invalid"
+
+
+
+// Game function
+// Play 5 rounds
+// If player's score >= 3, declare the user a winner
+// If computer's score >= 3, 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,7 +200,8 @@ console.log(getUserChoice("scis")); // After writing out the function, you need 
     
     //Play till the first player reaches a score of 3 (which is theoretically more than 5 rounds)
 
-/* function scoreRound() { 
+
+    function scoreRound() { 
     // Calls playRound() and store in the result variable
     let result = playRound(playerSelection, computerSelection) 
     // Determine if player or computer wins
@@ -159,6 +215,5 @@ console.log(getUserChoice("scis")); // After writing out the function, you need 
 }
 
 console.log(scoreRound());
-*/
 
-*./
+*/
