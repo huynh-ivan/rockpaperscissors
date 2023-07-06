@@ -76,13 +76,11 @@ function playRound(playerSelection, computerSelection) {
     //Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
     
     return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
-        : (playerSelection === rock && computerSelection === rock) ? "It's a draw!"
+        : (playerSelection === computerSelection) ? "It's a draw!"
         : (playerSelection === rock && computerSelection === paper) ? "You lose! Paper beats rock."
         : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock!"
-        : (playerSelection === paper && computerSelection === paper) ? "It's a draw!"
         : (playerSelection === paper && computerSelection === scissors) ? "You lose! Scissors beats paper."
         : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beats paper!"
-        : (playerSelection === scissors && computerSelection === scissors) ? "It's a draw"
         : (playerSelection === scissors && computerSelection === rock) ? "You lose! Rock beats scissors."
         : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
         : "";
