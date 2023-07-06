@@ -94,6 +94,10 @@ console.log(playRound(playerSelection, computerSelection));
 
 let playerScore = 0;
 let computerScore = 0;
+//let increaseScore = ++playerScore;
+
+//console.log(increaseScore);
+
 // Helper Functions
 function scoreRound() { 
     // Calls playRound() and store in the result variable
@@ -102,14 +106,15 @@ function scoreRound() {
     // Determine if player or computer wins
     // increment playerScore or computerScore by 1
     
-    return (result.includes("win")) ? console.log(playerScore++)
-        : (result.includes("lose")) ? console.log(computerScore++)
-        : (result.includes("draw")) ? console.log((playerScore += 0, computerScore += 0))
+    return (result.includes("win")) ? console.log(++playerScore)
+        : (result.includes("lose")) ? console.log(++computerScore)
+        : (result.includes("draw")) ? console.log(playerScore + computerScore)
         : (result.includes("invalid")) ? "Invalid outcome" 
         : "How'd you get here?";
 }
 
 console.log(scoreRound());
+
 
 //Game function
 
