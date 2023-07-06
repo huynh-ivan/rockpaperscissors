@@ -108,7 +108,7 @@ function scoreRound() {
     
     return (result.includes("win")) ? console.log(++playerScore)
         : (result.includes("lose")) ? console.log(++computerScore)
-        : (result.includes("draw")) ? console.log(playerScore + computerScore)
+        : (result.includes("draw")) ? console.log(playerScore++ & computerScore++)
         : (result.includes("invalid")) ? "Invalid outcome" 
         : "How'd you get here?";
 }
