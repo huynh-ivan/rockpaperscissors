@@ -62,7 +62,7 @@ let computerScore = 0;
 
 // Function to play 1 round and keep the score
 
-function keepScore (win, lose, tie, invalid) {
+/*function keepScore (win, lose, tie, invalid) {
     let score = playRound(playerSelection, computerSelection)
     if (score.includes("win")) {
         win();
@@ -94,6 +94,7 @@ function tie {
 function invalid {
     return "this is invalid"
 }
+*/
 
 // If the return contains "win", increase the player's score by 1
 // If the return contains "lose", increase the computer's score by 1
