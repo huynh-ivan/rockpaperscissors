@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
         : (playerSelection === paper && computerSelection === scissors) ? 0
         : (playerSelection === scissors && computerSelection === paper) ? 1
         : (playerSelection === scissors && computerSelection === rock) ? 0
-        : (playerSelection === computerSelection) ? 0
+        : (playerSelection === computerSelection) ? null
         : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
         : "";
 }
