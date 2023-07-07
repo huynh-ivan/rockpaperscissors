@@ -53,8 +53,6 @@ function playRound(playerSelection, computerSelection) {
 //console.log(computerSelection);    
 console.log(playRound(playerSelection, computerSelection));
 
-let playerScore = 0;
-let computerScore = 0;
 
 let roundOne = "";
 let roundTwo = "";
