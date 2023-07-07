@@ -49,13 +49,18 @@ function playRound(playerSelection, computerSelection) {
         : "";
 }
         
-console.log(playerSelection);
-console.log(computerSelection);    
+//console.log(playerSelection);
+//console.log(computerSelection);    
 console.log(playRound(playerSelection, computerSelection));
 
 let playerScore = 0;
 let computerScore = 0;
 
+let roundOne = "";
+let roundTwo = "";
+let roundThree = "";
+let roundFour = "";
+let roundFive = "";
 // Helper Functions
 
 //Function to convert "win"/"lose"/"draw" into numbers?
