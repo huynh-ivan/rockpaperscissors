@@ -30,12 +30,12 @@ function getComputerChoice() { // Create a function that will automatically retu
 }
 
 //Prompt the user to input a value and lowercase the return value
-
+let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
+let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
     // Invoke getComputerChoice in this function
-    let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
-    let computerSelection = getComputerChoice();
+    
     
     // Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
     return (playerSelection === rock && computerSelection === scissors) ? 1
