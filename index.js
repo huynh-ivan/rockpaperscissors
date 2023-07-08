@@ -39,20 +39,20 @@ function playRound() {
     let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
     
     // Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
-    return (playerSelection === rock && computerSelection === scissors) ? "win"
-        : (playerSelection === rock && computerSelection === paper) ? "lose"
-        : (playerSelection === paper && computerSelection === rock ) ? "win"
-        : (playerSelection === paper && computerSelection === scissors) ? "lose"
-        : (playerSelection === scissors && computerSelection === paper) ? "win"
-        : (playerSelection === scissors && computerSelection === rock) ? "lose"
-        : (playerSelection === computerSelection) ? "tie"
+    return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
+        : (playerSelection === rock && computerSelection === paper) ? "You lose. Paper beats rock."
+        : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock."
+        : (playerSelection === paper && computerSelection === scissors) ? "You lose. Scissors beat paper."
+        : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beat paper."
+        : (playerSelection === scissors && computerSelection === rock) ? "You lose. Rock beats scissors"
+        : (playerSelection === computerSelection) ? "You tied."
         : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
         : "";
 }
         
-console.log(playerSelection);
-console.log(computerSelection);    
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playerSelection);
+//console.log(computerSelection);    
+//console.log(playRound(playerSelection, computerSelection));
 
 
 /* let roundOne = "";
@@ -83,7 +83,7 @@ function game() {
     console.log(roundThree);
     console.log(roundFour);
     console.log(roundFive);
-    console.log(winner);
+    //console.log(winner);
 
     if (winner.match(/win/g).length === 3) {
         console.log("Player Wins!")
@@ -95,7 +95,7 @@ function game() {
         console.log("It's a tie")
     }
 }
- 
+
 
 game();
 
