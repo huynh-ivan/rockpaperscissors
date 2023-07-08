@@ -55,12 +55,13 @@ console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
 
 
-let roundOne = "";
+/* let roundOne = "";
 let roundTwo = "";
 let roundThree = "";
 let roundFour = "";
 let roundFive = "";
-let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
+let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString(); 
+*/
 
 //console.log(winner);
 //console.log(typeof(winner));
@@ -75,6 +76,7 @@ function game() {
     let roundThree = playRound(playerSelection, computerSelection);
     let roundFour = playRound(playerSelection, computerSelection);
     let roundFive = playRound(playerSelection, computerSelection);
+    let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
 
     console.log(roundOne);
     console.log(roundTwo);
