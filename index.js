@@ -54,11 +54,18 @@ console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
 
 
-let roundOne = "";
-let roundTwo = "";
-let roundThree = "";
-let roundFour = "";
-let roundFive = "";
+let roundOne = "win";
+let roundTwo = 2;
+let roundThree = "win";
+let roundFour = 4;
+let roundFive = 5;
+let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
+
+
+
+console.log(winner);
+console.log(typeof(winner));
+console.log(winner.match(/win/g).length);
 // Helper Functions
 
 //Function to convert "win"/"lose"/"draw" into numbers?
