@@ -30,12 +30,13 @@ function getComputerChoice() { // Create a function that will automatically retu
 }
 
 //Prompt the user to input a value and lowercase the return value
-let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
+let playerSelection = "";
+
 let computerSelection = getComputerChoice();
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
     // Invoke getComputerChoice in this function
-    
+    let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
     
     // Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
     return (playerSelection === rock && computerSelection === scissors) ? "win"
@@ -54,73 +55,47 @@ console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
 
 
-let roundOne = "win";
-let roundTwo = 2;
-let roundThree = "win";
-let roundFour = 4;
-let roundFive = 5;
+let roundOne = "";
+let roundTwo = "";
+let roundThree = "";
+let roundFour = "";
+let roundFive = "";
 let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
 
-
-
-console.log(winner);
-console.log(typeof(winner));
-console.log(winner.match(/win/g).length);
-// Helper Functions
-
-//Function to convert "win"/"lose"/"draw" into numbers?
-
-// Function to play 1 round and keep the score
-
-/*function keepScore (win, lose, tie, invalid) {
-    let score = playRound(playerSelection, computerSelection)
-    if (score.includes("win")) {
-        win();
-    
-    } 
-    else if (score.includes("lose")) {
-        lose();
-    }
-    else if (score.includes("tie")) {
-        tie()
-    }
-    else {
-        invalid();
-    }
-}
-
-function win {
-    return ++playerScore;
-}
-
-function lose {
-    return ++computerScore;
-}
-
-function tie {
-    return [(playerScore + 0), (computerScore+0)]
-}
-
-function invalid {
-    return "this is invalid"
-}
-*/
-
-// If the return contains "win", increase the player's score by 1
-// If the return contains "lose", increase the computer's score by 1
-// If the return contains "tie", 
-// If the return contains "invalid"
-
-
+//console.log(winner);
+//console.log(typeof(winner));
+//console.log(winner.match(/win/g).length);
 
 // Game function
-// Play 5 rounds
-// If player's score >= 3, declare the user a winner
-// If computer's score >= 3, 
 
+function game() {
+    // set variables to output the return values of playRound()
+    let roundOne = playRound(playerSelection, computerSelection);
+    let roundTwo = playRound(playerSelection, computerSelection);
+    let roundThree = playRound(playerSelection, computerSelection);
+    let roundFour = playRound(playerSelection, computerSelection);
+    let roundFive = playRound(playerSelection, computerSelection);
 
+    console.log(roundOne);
+    console.log(roundTwo);
+    console.log(roundThree);
+    console.log(roundFour);
+    console.log(roundFive);
+    console.log(winner);
 
+    if (winner.match(/win/g).length === 3) {
+        console.log("Player Wins!")
+    }
+    else if (winner.match(/lose/g.length === 3)) {
+        console.log("Computer Wins!")
+    }
+    else {
+        console.log("It's a tie")
+    }
+}
+ 
 
+game();
 
 
 
@@ -228,4 +203,48 @@ console.log(getUserChoice("scis")); // After writing out the function, you need 
 
 console.log(scoreRound());
 
+// Helper Functions
+
+//Function to convert "win"/"lose"/"draw" into numbers?
+
+// Function to play 1 round and keep the score
+
+/*function keepScore (win, lose, tie, invalid) {
+    let score = playRound(playerSelection, computerSelection)
+    if (score.includes("win")) {
+        win();
+    
+    } 
+    else if (score.includes("lose")) {
+        lose();
+    }
+    else if (score.includes("tie")) {
+        tie()
+    }
+    else {
+        invalid();
+    }
+}
+
+function win {
+    return ++playerScore;
+}
+
+function lose {
+    return ++computerScore;
+}
+
+function tie {
+    return [(playerScore + 0), (computerScore+0)]
+}
+
+function invalid {
+    return "this is invalid"
+}
 */
+
+// If the return contains "win", increase the player's score by 1
+// If the return contains "lose", increase the computer's score by 1
+// If the return contains "tie", 
+// If the return contains "invalid"
+
