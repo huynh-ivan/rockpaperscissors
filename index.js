@@ -84,10 +84,10 @@ function game() {
 
     let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
 
-    if (winner.match(/win/g).length === 3) {
+    if (winner.match(/win/g).length >= 3) {
         console.log("Player Wins!")
     }
-    else if (winner.match(/lose/g.length === 3)) {
+    else if (winner.match(/lose/g.length >= 3)) {
         console.log("Computer Wins!")
     }
     else {
