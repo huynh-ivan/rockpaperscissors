@@ -72,18 +72,17 @@ let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
 function game() {
     // set variables to output the return values of playRound()
     let roundOne = playRound(playerSelection, computerSelection);
-    let roundTwo = playRound(playerSelection, computerSelection);
-    let roundThree = playRound(playerSelection, computerSelection);
-    let roundFour = playRound(playerSelection, computerSelection);
-    let roundFive = playRound(playerSelection, computerSelection);
-    let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
-
     console.log(roundOne);
+    let roundTwo = playRound(playerSelection, computerSelection);
     console.log(roundTwo);
+    let roundThree = playRound(playerSelection, computerSelection);
     console.log(roundThree);
+    let roundFour = playRound(playerSelection, computerSelection);
     console.log(roundFour);
+    let roundFive = playRound(playerSelection, computerSelection);
     console.log(roundFive);
-    //console.log(winner);
+
+    let winner = [roundOne, roundTwo, roundThree, roundFour, roundFive].toString();
 
     if (winner.match(/win/g).length === 3) {
         console.log("Player Wins!")
