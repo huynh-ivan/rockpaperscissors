@@ -3,6 +3,8 @@
 
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -11,5 +13,7 @@
 #paper, 
 #scissors { 
     width: 100px; 
-    height: 52px;   
+    height: 52px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
