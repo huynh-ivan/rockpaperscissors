@@ -1,3 +1,12 @@
+
+/* Global Styles*/
+
+.container {
+    display: flex;
+}
+
+
+/* Button Styles */
 #rock, 
 #paper, 
 #scissors { 
