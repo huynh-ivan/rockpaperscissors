@@ -1,5 +1,8 @@
 
 /* Global Styles*/
+* {
+    margin: 0px;
+}
 
 .container {
     display: flex;
