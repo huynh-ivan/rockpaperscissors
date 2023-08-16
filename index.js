@@ -9,6 +9,7 @@ const paper = "paper";
 const scissors = "scissors"; 
 
 
+
 function randomInt(max) { // this function returns a random int from 0 to 2
     return Math.floor(Math.random() * max);
 }
