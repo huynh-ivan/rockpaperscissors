@@ -8,6 +8,17 @@ const rock = "rock";
 const paper = "paper";
 const scissors = "scissors"; 
 
+//Create a variable to store the return value of a function, where the function returns either rock paper or scissors, depending on which button is clicked.
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(button.id);
+        return button.id;
+    });
+});
+
 
 
 function randomInt(max) { // this function returns a random int from 0 to 2
