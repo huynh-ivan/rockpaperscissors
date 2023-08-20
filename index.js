@@ -24,31 +24,31 @@ function getComputerChoice() { // Create a function that will automatically retu
     }
 };
 
-const playerSelection = '';
-const computerSelection = '';
 
 
 const buttons = document.querySelectorAll('button');
-
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        
-        console.log(playRound(playerSelection, computerSelection));
-        
+       let playerSelection = button.id;
+       let computerSelection = getComputerChoice();
+       
+       function playRound() {
+        console.log(playerSelection);
+        console.log(computerSelection);
+    
+        return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
+            : (playerSelection === rock && computerSelection === paper) ? "You lose. Paper beats rock."
+            : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock."
+            : (playerSelection === paper && computerSelection === scissors) ? "You lose. Scissors beat paper."
+            : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beat paper."
+            : (playerSelection === scissors && computerSelection === rock) ? "You lose. Rock beats scissors"
+            : (playerSelection === computerSelection) ? "You tied."
+            : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
+            : "";
+        };
+       
+        console.log(playRound())
     });
 });
 
-function playRound() {
-    console.log(playerSelection);
-    console.log(computerSelection);
 
-    return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
-        : (playerSelection === rock && computerSelection === paper) ? "You lose. Paper beats rock."
-        : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock."
-        : (playerSelection === paper && computerSelection === scissors) ? "You lose. Scissors beat paper."
-        : (playerSelection === scissors && computerSelection === paper) ? "You win! Scissors beat paper."
-        : (playerSelection === scissors && computerSelection === rock) ? "You lose. Rock beats scissors"
-        : (playerSelection === computerSelection) ? "You tied."
-        : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
-        : "";
-};
