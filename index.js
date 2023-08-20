@@ -15,11 +15,11 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         console.log(button.id);
-        return button.id;
+        return button.id; // does this need to be a string?
     });
 });
 
-
+// The code below creates the computer choice
 
 function randomInt(max) { // this function returns a random int from 0 to 2
     return Math.floor(Math.random() * max);
@@ -36,18 +36,16 @@ function getComputerChoice() { // Create a function that will automatically retu
     else {
         return scissors;
     }
-}
+};
+
+
 
 //Prompt the user to input a value and lowercase the return value
-let playerSelection = "";
+const playerSelection = buttons;
 
-let computerSelection = getComputerChoice();
+const computerSelection = getComputerChoice();
 
 function playRound() {
-    // Invoke getComputerChoice in this function
-    let playerSelection = prompt("Rock, Paper, or scissors?", "").toLowerCase();
-    
-    // Create a series of of if/else statements using the `and` operator. These statements should return a message containing the normalized user input and the computer's input.
     return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
         : (playerSelection === rock && computerSelection === paper) ? "You lose. Paper beats rock."
         : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock."
@@ -57,11 +55,7 @@ function playRound() {
         : (playerSelection === computerSelection) ? "You tied."
         : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
         : "";
-}
-        
-
-
-
+};
 
 
 
