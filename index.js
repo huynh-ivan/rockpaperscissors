@@ -53,7 +53,7 @@ buttons.forEach((button) => {
 });
 
 /*
-Next step is to figure out how to display the results of buttons on the html page
+Display the results of playRound within the #results div
 
 */
 
