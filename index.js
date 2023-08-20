@@ -25,13 +25,15 @@ function getComputerChoice() { // Create a function that will automatically retu
 };
 
 
-
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+
+    //Declare Variables
        let playerSelection = button.id;
        let computerSelection = getComputerChoice();
-       
+    
+    //Declare playRound() function
        function playRound() {
         console.log(playerSelection);
         console.log(computerSelection);
@@ -46,8 +48,8 @@ buttons.forEach((button) => {
             : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
             : "";
         };
-       
-        console.log(playRound())
+        // Console.log the results of the round
+        console.log(playRound());
     });
 });
 
