@@ -51,12 +51,22 @@ buttons.forEach((button) => {
     console.log(playRound());
     
     //Display the results of each round within the #results container
+    
+    
     const results = document.querySelector('#results');
-    const content = document.createElement('div');
-    content.classList.add('content');
-    content.textContent = playRound();
+    const roundResult = document.createElement('div');
+    roundResult.textContent = playRound();
 
-    results.appendChild(content);
+    const showPlayerChoice = document.createElement('div');
+    showPlayerChoice.textContent = playerSelection;
+
+    const showComputerChoice = document.createElement('div');
+    showComputerChoice.textContent = computerSelection;
+
+    roundResult.appendChild(showPlayerChoice);
+    roundResult.appendChild(showComputerChoice);
+
+    results.appendChild(roundResult);
 
     });
 });
