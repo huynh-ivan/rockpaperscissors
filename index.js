@@ -42,8 +42,15 @@ function playRound() {
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
-    button.addEventListener('click', playRound());
+    button.addEventListener('click', () => {
+        let playerSelection = button.id.toString();
+        let computerSelection = getComputerChoice();
+        
+        console.log(playerSelection);
+        console.log(computerSelection);
+        
+        console.log(playRound(playerSelection, computerSelection));
+        
+        
+    });
 });
-
-
-//the eventListner should call playRound() & playerSelection should equal the return value of the function
