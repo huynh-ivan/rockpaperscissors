@@ -2,6 +2,7 @@
 /* Global Styles*/
 * {
     margin: 0px;
+    border: 1px red solid;
 }
 
 .container {
@@ -17,6 +18,13 @@
 #results {
     color: black;
 }
+
+.roundResult {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 
 /* Button Styles */
 #rock, 

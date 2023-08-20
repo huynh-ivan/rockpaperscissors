@@ -55,6 +55,7 @@ buttons.forEach((button) => {
     
     const results = document.querySelector('#results');
     const roundResult = document.createElement('div');
+    roundResult.classList.add('roundResult')
     roundResult.textContent = playRound();
 
     const showPlayerChoice = document.createElement('div');
