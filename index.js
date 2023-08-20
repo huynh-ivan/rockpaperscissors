@@ -47,10 +47,13 @@ buttons.forEach((button) => {
             : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
             : "";
         };
-    // Console.log the results of the round
+    //Console.log the results of the round
     console.log(playRound());
-    
     });
 });
 
+/*
+Next step is to figure out how to display the results of buttons on the html page
+
+*/
 
