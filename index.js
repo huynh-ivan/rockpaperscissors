@@ -24,18 +24,7 @@ function getComputerChoice() { // Create a function that will automatically retu
     }
 };
 
-//Create a variable to store the return value of a function, where the function returns either rock paper or scissors, depending on which button is clicked.
-
-const buttons = document.querySelectorAll('button');
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        console.log(button.id);
-        return playerSelection = button.id;
-    });
-});
-
-let playerSelection = buttons;
-
+const playerSelection = "";
 const computerSelection = getComputerChoice();
 
 function playRound() {
@@ -50,5 +39,11 @@ function playRound() {
         : "";
 };
 
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', playRound());
+});
 
 
+//the eventListner should call playRound() & playerSelection should equal the return value of the function
