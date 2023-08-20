@@ -49,21 +49,17 @@ buttons.forEach((button) => {
         };
     //Console.log the results of the round
     console.log(playRound());
-
+    
+    //Display the results of each round within the #results container
     const results = document.querySelector('#results');
     const content = document.createElement('div');
     content.classList.add('content');
     content.textContent = playRound();
 
     results.appendChild(content);
-    
+
     });
 });
 
-/*
-Display the results of playRound within the #results div
 
-
-
-*/
 
