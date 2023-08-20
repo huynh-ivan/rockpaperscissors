@@ -30,14 +30,13 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
 
     //Declare Variables
-       let playerSelection = button.id;
-       let computerSelection = getComputerChoice();
+    let playerSelection = button.id;
+    let computerSelection = getComputerChoice();
     
     //Declare playRound() function
-       function playRound() {
+    function playRound() {
         console.log(playerSelection);
         console.log(computerSelection);
-    
         return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
             : (playerSelection === rock && computerSelection === paper) ? "You lose. Paper beats rock."
             : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock."
@@ -48,8 +47,9 @@ buttons.forEach((button) => {
             : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
             : "";
         };
-        // Console.log the results of the round
-        console.log(playRound());
+    // Console.log the results of the round
+    console.log(playRound());
+    
     });
 });
 
