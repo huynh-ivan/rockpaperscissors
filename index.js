@@ -24,10 +24,24 @@ function getComputerChoice() { // Create a function that will automatically retu
     }
 };
 
-const playerSelection = "";
-const computerSelection = getComputerChoice();
+const playerSelection = '';
+const computerSelection = '';
+
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        
+        console.log(playRound(playerSelection, computerSelection));
+        
+    });
+});
 
 function playRound() {
+    console.log(playerSelection);
+    console.log(computerSelection);
+
     return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
         : (playerSelection === rock && computerSelection === paper) ? "You lose. Paper beats rock."
         : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock."
@@ -38,19 +52,3 @@ function playRound() {
         : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
         : "";
 };
-
-const buttons = document.querySelectorAll('button');
-
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        let playerSelection = button.id.toString();
-        let computerSelection = getComputerChoice();
-        
-        console.log(playerSelection);
-        console.log(computerSelection);
-        
-        console.log(playRound(playerSelection, computerSelection));
-        
-        
-    });
-});
