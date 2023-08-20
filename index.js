@@ -58,10 +58,10 @@ buttons.forEach((button) => {
     roundResult.textContent = playRound();
 
     const showPlayerChoice = document.createElement('div');
-    showPlayerChoice.textContent = playerSelection;
+    showPlayerChoice.textContent = `You chose ${playerSelection}`;
 
     const showComputerChoice = document.createElement('div');
-    showComputerChoice.textContent = computerSelection;
+    showComputerChoice.textContent = `Computer chose ${computerSelection}`;
 
     roundResult.appendChild(showPlayerChoice);
     roundResult.appendChild(showComputerChoice);
