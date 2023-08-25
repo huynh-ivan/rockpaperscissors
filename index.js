@@ -51,14 +51,34 @@ buttons.forEach((button) => {
     console.log(playRound());
     
     //Display the results of each round within the #results container
-    
-    
     const results = document.querySelector('#results');
     const roundResult = document.createElement('div');
     roundResult.classList.add('roundResult')
     roundResult.textContent = playRound();
 
-    const showPlayerChoice = document.createElement('div');
+    //Display the winner of the round in a new div that appears when either player score or computer score equals 5
+    function increaseScore { 
+        let playerScore = 0;
+        let computerScore = 0; 
+        if (playRound().match(/win/) === true) {
+            playerScore += 1
+        } else if (playRound().match(/lose/) === true) {
+            computerScore +=1
+        } else {
+            playerScore = playScore;
+            computerScore = computerScore;
+        };
+    };
+
+    //Display the player's choice in it's own container
+    //Display the player's score in the same container
+
+    //Display the computer choice in it's own container
+    //Display the player's score in the same container
+
+
+
+    /*const showPlayerChoice = document.createElement('div');
     showPlayerChoice.textContent = `You chose ${playerSelection}`;
 
     const showComputerChoice = document.createElement('div');
@@ -68,7 +88,8 @@ buttons.forEach((button) => {
     roundResult.appendChild(showComputerChoice);
 
     results.appendChild(roundResult);
-
+    */
+    //Delete current score and replace it with the next roundResult
     });
 });
 
