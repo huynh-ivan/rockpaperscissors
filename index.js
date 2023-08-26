@@ -70,20 +70,35 @@ buttons.forEach((button) => {
         
         //Variables for selecting HTML Elements
         const resultsContainer = document.querySelector('.resultsContainer'); //Target the resultsContainer html element
+        
+        const playerTotal = document.querySelector('#playerTotal');
+        playerTotal.textContent = playerRunningScore;
 
-        const roundResult = document.createElement('div'); //Create a `div` into the html to display the results of a round
+        const compTotal = document.querySelector('#compTotal');
+        compTotal.textContent = compRunningScore;
+
+        const roundResult = document.querySelector('#roundResult'); //Create a `div` into the html to display the results of a round
         roundResult.textContent = playRound();   
-
-    
-        resultsContainer.appendChild(roundResult) // Insert roundResult into the resultsContainer
-    
+        
+        
     };
     
     updateRunningScores();
-    
     });
+
+
 });
 
 
 
 
+/*
+
+Behavior:
+1. When button is clicked
+    a. display the roundResult
+2. When a button is clicked again
+    a. clear the previous roundResult
+    b. display the next roundResult
+
+*/
