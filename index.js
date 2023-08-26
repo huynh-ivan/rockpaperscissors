@@ -85,20 +85,6 @@ buttons.forEach((button) => {
     
     updateRunningScores();
     });
-
-
 });
 
 
-
-
-/*
-
-Behavior:
-1. When button is clicked
-    a. display the roundResult
-2. When a button is clicked again
-    a. clear the previous roundResult
-    b. display the next roundResult
-
-*/
