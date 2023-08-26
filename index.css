@@ -8,10 +8,16 @@
 
 .scoresContainer,
 .resultsContainer,
+.controlsContainer,
 .buttonContainer { 
     display: flex;
     justify-content: center;
     margin-top: 32px;
+}
+
+.controlsContainer {
+    flex-direction: column;
+    align-items: center;
 }
 
 .scoresContainer {
@@ -37,14 +43,6 @@
     font-weight: 400;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    padding: 16px;
-}
 
 
 #results {
