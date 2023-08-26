@@ -56,10 +56,8 @@ buttons.forEach((button) => {
     roundResult.textContent = playRound();
 
 
-    const playerScore = document.querySelector('.playerScore.scoreCount')//target the scoreCount html element of the playerScore .html element
+    const playerScore = document.querySelector('.playerScore')//target the scoreCount html element of the playerScore .html element
     const compScore = document.querySelector('.compScore.scoreCount') //target the scoreCount html element of the compScore html element
-
-
 
 
 
