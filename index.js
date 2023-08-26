@@ -80,11 +80,16 @@ buttons.forEach((button) => {
         const roundResult = document.querySelector('#roundResult'); //Create a `div` into the html to display the results of a round
         roundResult.textContent = playRound();   
         
-        
+        function declareWinner() {
+            if (playerRunningScore >= 5) {
+                alert("You Win!")
+            } else if (compRunningScore >= 5) {
+                alert("You lose :(")
+            };
+        }; 
+        declareWinner();
     };
     
     updateRunningScores();
     });
 });
-
-
