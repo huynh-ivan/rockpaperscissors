@@ -35,8 +35,6 @@ buttons.forEach((button) => {
     
     //Declare playRound() function
     function playRound() {
-        console.log(playerSelection);
-        console.log(computerSelection);
         return (playerSelection === rock && computerSelection === scissors) ? "You win! Rock beats scissors."
             : (playerSelection === rock && computerSelection === paper) ? "You lose. Paper beats rock."
             : (playerSelection === paper && computerSelection === rock ) ? "You win! Paper beats rock."
@@ -47,40 +45,26 @@ buttons.forEach((button) => {
             : (playerSelection !== rock || paper || scissors) ? "Input is invalid. Try a new value."
             : "";
         };
-    //Console.log the results of the round
-    console.log(playRound());
+        console.log(playerSelection);
+        console.log(computerSelection);
+        console.log(playRound());
     
-    //Display the results of each round within the #results container
-    const results = document.querySelector('.resultsContainer');
-    const roundResult = document.createElement('div');
-    roundResult.classList.add('roundResult')
+    
+    const resultsContainer = document.querySelector('.resultsContainer'); //Target the resultsContainer html element
+
+    const roundResult = document.createElement('div'); //Create a `div` into the html to display the results of a round
     roundResult.textContent = playRound();
 
-    results.appendChild(roundResult)
 
-    //Display the winner of the round in a new div that appears when either player score or computer score equals 5
-   
-
-    //Display the player's choice in it's own container
-    //Display the player's score in the same container
-
-    //Display the computer choice in it's own container
-    //Display the player's score in the same container
+    const playerScore = document.querySelector('.playerScore.scoreCount')//target the scoreCount html element of the playerScore .html element
+    const compScore = document.querySelector('.compScore.scoreCount') //target the scoreCount html element of the compScore html element
 
 
 
-    /*const showPlayerChoice = document.createElement('div');
-    showPlayerChoice.textContent = `You chose ${playerSelection}`;
 
-    const showComputerChoice = document.createElement('div');
-    showComputerChoice.textContent = `Computer chose ${computerSelection}`;
 
-    roundResult.appendChild(showPlayerChoice);
-    roundResult.appendChild(showComputerChoice);
+    resultsContainer.appendChild(roundResult) // Insert roundResult into the resultsContainer
 
-    results.appendChild(roundResult);
-    */
-    //Delete current score and replace it with the next roundResult
     });
 });
 
