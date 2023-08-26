@@ -1,8 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 /* Global Styles*/
 * {
     margin: 0px;
-    border: 1px red solid;
+    font-family: 'inter', arial;
+}
+
+.scoresContainer,
+.resultsContainer,
+.buttonContainer { 
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.scoresContainer {
+    gap: 64px;
+}
+
+.playerScore, 
+.compScore { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    min-width: 200px;
+}
+
+.scoreCount {
+    font-size: 128px;
+    font-weight: 600;
+}
+
+.scoreLabel {
+    font-size: 48px;
+    font-weight: 400;
 }
 
 .container {
